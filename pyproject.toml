@@ -1,0 +1,10 @@
+[project]
+name = "nestle-automation-tooling"
+version = "0.1.0"
+description = "Reusable schemas and architecture for Nestle-related automation workflows."
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["packages/schemas"]
+testpaths = ["tests"]
