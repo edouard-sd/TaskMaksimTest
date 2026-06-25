@@ -2,6 +2,36 @@
 
 This repository scopes three reusable automation projects for Nestlé-related concept development workflows. The recommended approach is a modular platform with shared data contracts, orchestration, retrieval, evaluation, and reporting primitives so each workflow can be reused independently or composed into larger pipelines.
 
+
+## How to verify this first version works
+
+This first version is a foundation, not a fully connected production system. It works if the local schemas can be imported, realistic sample inputs can be loaded, and the smoke-test script can create representative objects for the video, RSP, and persona workflows.
+
+### 1. Run the automated tests
+
+```bash
+python -m pytest
+```
+
+Expected result: all tests pass. These tests validate the initial schema contracts, including currency normalization, benchmark price observations, persona tasks, and the minimum concept payload.
+
+### 2. Run the local workflow smoke test
+
+```bash
+PYTHONPATH=packages/schemas python scripts/smoke_test_workflows.py
+```
+
+Expected result: the command prints five `OK:` lines confirming that the sample concept loads, a video brief is created, benchmark peers load, an RSP recommendation is produced, and a persona task is created. This test intentionally avoids external AI, video, retailer, and browser APIs so it is deterministic and safe to run locally.
+
+### 3. Inspect the sample inputs
+
+- `examples/sample_concept.json` shows the minimum concept, benefits, reasons to believe, and brand-guideline inputs expected by the future video and persona workflows.
+- `examples/sample_benchmark.json` shows the peer-product and price-observation inputs expected by the RSP workflow.
+
+### 4. What is not working yet
+
+The current repository does not yet generate real videos, scrape live retailer prices, or drive a browser as a persona. Those are the next implementation milestones after this foundation: add provider adapters, connect approved data sources, and build workflow services around these contracts.
+
 ## Platform principles
 
 - **Modular by default:** each workflow is packaged as a service or library with explicit inputs, outputs, and versioned schemas.

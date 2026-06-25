@@ -1,0 +1,20 @@
+{
+  "concept_id": "concept-protein-coffee-us-001",
+  "name": "Protein Coffee",
+  "category": "beverages",
+  "market": "US",
+  "description": "A chilled ready-to-drink coffee with added protein for busy mornings.",
+  "target_audience": "Busy professionals who want convenient energy and nutrition",
+  "benefits": ["Convenient morning energy", "Added protein", "Ready to drink"],
+  "reasons_to_believe": ["Made with real coffee", "Contains 15g protein per bottle"],
+  "brand_guidelines": {
+    "brand_name": "Example Nestle Brand",
+    "market": "US",
+    "tone_of_voice": ["confident", "warm", "simple"],
+    "required_disclaimers": ["Concept only; claims require regulatory review"],
+    "forbidden_claims": ["cures fatigue", "guaranteed weight loss"],
+    "color_palette": ["#4B2E2A", "#F4E7D3"],
+    "logo_usage_rules": ["Keep logo clear space on end card"],
+    "source_uris": ["internal://brand-guidelines/example"]
+  }
+}
