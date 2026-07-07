@@ -3,6 +3,17 @@
 This repository scopes three reusable automation projects for Nestlé-related concept development workflows. The recommended approach is a modular platform with shared data contracts, orchestration, retrieval, evaluation, and reporting primitives so each workflow can be reused independently or composed into larger pipelines.
 
 
+## If you just want to run it
+
+Open the repository folder in VS Code or Cursor, open a terminal, and run:
+
+```bash
+cd /workspace/TaskMaksimTest
+./scripts/run_local.sh
+```
+
+For a step-by-step French guide, see `LANCER_LE_PROJET.md`.
+
 ## How to verify this first version works
 
 This first version is a foundation, not a fully connected production system. It works if the local schemas can be imported, realistic sample inputs can be loaded, and the smoke-test script can create representative objects for the video, RSP, and persona workflows.
